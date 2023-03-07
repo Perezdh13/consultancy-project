@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+    <!-- FileInput CSS -->
+    <link th:href="@{/plugins/fileinput/css/fileinput.css}" media="all" rel="stylesheet" type="text/css">
+    <link th:href="@{/plugins/fileinput/themes/explorer-fas/theme.css}" media="all" rel="stylesheet"  type="text/css"/>
+    <!-- Javascript -->
+    <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+
+    <!-- FileInput -->
+    <script th:src="@{/plugins/fileinput/js/plugins/piexif.js}"></script>
+    <script th:src="@{/plugins/fileinput/js/plugins/sortable.js}"></script>
+    <script th:src="@{/plugins/fileinput/js/fileinput.js}"></script>
+    <script th:src="@{/plugins/fileinput/js/locales/es.js}"></script>
+    <script th:src="@{/plugins/fileinput/themes/fas/theme.js}"></script>
+    <script th:src="@{/plugins/fileinput/js/configuracion.js}"></script>
     <title>Title</title>
 </head>
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="form-row pt-2">
+                <div class="form-group col-12">
+                    <div class="file-loading">
+                        <input id="file-0a" class="file" name="file" type="file" multiple="true" data-min-file-count="0" data-theme="fas">
+                        <input id="file-1a" class="file" name="file" type="file" multiple="true" data-min-file-count="0" data-theme="fas">
+
+                    </div>
+                    <div id="kv-error-1" style="margin-top:10px;display:none"></div>
+                    <div id="kv-success-1" class="alert alert-success" style="margin-top:10px;display:none"></div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
