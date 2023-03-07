@@ -16,7 +16,7 @@ public class CrudApplication {
 		return String.format("Hello  peopleee %s!", name);
 	}
 	@GetMapping("/createtask")
-	public String create(@RequestParam(value = "task", defaultValue = "pan")String task){
-		return String.format("comprar %s!", task);
+	public String create(@RequestParam(value = "task", defaultValue = "pan")String name){
+		return String.format("comprar %s!", name);
 	}
 }
