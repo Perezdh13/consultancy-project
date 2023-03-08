@@ -1,70 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-
-    <!-- FileInput CSS -->
-    <link th:href="@{/plugins/fileinput/css/fileinput.css}" media="all" rel="stylesheet" type="text/css">
-    <link th:href="@{/plugins/fileinput/themes/explorer-fas/theme.css}" media="all" rel="stylesheet"  type="text/css"/>
-    <!-- Javascript -->
-    <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
-    <script th:src="@{/js/popper.min.js}"></script>
-    <script th:src="@{/js/bootstrap.min.js}"></script>
-
-    <!-- FileInput -->
-    <script th:src="@{/plugins/fileinput/js/plugins/piexif.js}"></script>
-    <script th:src="@{/plugins/fileinput/js/plugins/sortable.js}"></script>
-    <script th:src="@{/plugins/fileinput/js/fileinput.js}"></script>
-    <script th:src="@{/plugins/fileinput/js/locales/es.js}"></script>
-    <script th:src="@{/plugins/fileinput/themes/fas/theme.js}"></script>
-    <script th:src="@{/plugins/fileinput/js/configuracion.js}"></script>
     <title>Title</title>
 </head>
 <body>
-<div class="seedstarterlist" th:unless="${#lists.isEmpty(allSeedStarters)}">
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Description</th>
 
-    <h2 th:text="#{title.list}">List of Seed Starters</h2>
-
-    <table>
-        <thead>
-        <tr>
-            <th th:text="#{seedstarter.datePlanted}">Date Planted</th>
-            <th th:text="#{seedstarter.covered}">Covered</th>
-            <th th:text="#{seedstarter.type}">Type</th>
-            <th th:text="#{seedstarter.features}">Features</th>
-            <th th:text="#{seedstarter.rows}">Rows</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="sb : ${allSeedStarters}">
-            <td th:text="${{sb.datePlanted}}">13/01/2011</td>
-            <td th:text="#{|bool.${sb.covered}|}">yes</td>
-            <td th:text="#{|seedstarter.type.${sb.type}|}">Wireframe</td>
-            <td th:text="${#strings.arrayJoin(
-                           #messages.arrayMsg(
-                               #strings.arrayPrepend(sb.features,'seedstarter.feature.')),
-                           ', ')}">Electric Heating, Turf</td>
-            <td>
-                <table>
-                    <tbody>
-                    <tr th:each="row,rowStat : ${sb.rows}">
-                        <td th:text="${rowStat.count}">1</td>
-                        <td th:text="${row.variety.name}">Thymus Thymi</td>
-                        <td th:text="${row.seedsPerCell}">12</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="consultation: ${consulting}">
+        <td th:text="${consultation.name}"></td>
+        <td th:text="${consultation.surname}"></td>
+        <td th:text="${consultation.title}"></td>
+        <td th:text="${consultation.description}"></td>
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>

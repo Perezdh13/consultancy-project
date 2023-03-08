@@ -15,11 +15,9 @@ import java.util.List;
 public class CConsultationController {
   @Autowired
     private IConsultation iConsultation;
-  /*private List<CConsultation> list(){
 
-    }*/
     @GetMapping("/")
-    public String list (Model model) { List<CConsultation> consultations = (List<CConsultation>) iConsultation.findAll();
+    public String list (Model model) { List<CConsultation> consultation = (List<CConsultation>) iConsultation.findAll();
     return "index";
     }
-}
+ }
