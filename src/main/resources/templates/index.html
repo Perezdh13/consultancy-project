@@ -26,27 +26,16 @@
     <title>Title</title>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-10">
-            <div class="form-row pt-2">
-                <div class="form-group col-12">
-                    <div class="file-loading">
-                        <input id="file-0a" class="file" name="file" type="file" multiple="true" data-min-file-count="0" data-theme="fas">
-                        <input id="file-1a" class="file" name="file" type="file" multiple="true" data-min-file-count="0" data-theme="fas">
-                    </div>
-                    <form action="#" th:action="@{/seedstartermng}" th:object="${seedStarter}" method="post">
-                    <h1>hola mundo esto esta funcionando</h1>
-                    </form>
 
-                    <div id="kv-error-1" style="margin-top:10px;display:none"></div>
-                    <div id="kv-success-1" class="alert alert-success" style="margin-top:10px;display:none"></div>
-                    <br>
-                </div>
-            </div>
+    <form action="#" th:action="@{/seedstartermng}" th:object="${seedStarter}" method="post">
+        <h1>hola mundo esto esta funcionando</h1>
+        <h3>csadcvfsadr</h3>
+        <div>
+            <label th:for="${#ids.next('covered')}" th:text="#{seedstarter.covered}">Covered</label>
+            <input type="checkbox" th:field="name" />
         </div>
-    </div>
-</div>
+
+    </form>
 
 </body>
 </html>
