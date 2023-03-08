@@ -34,8 +34,11 @@
                     <div class="file-loading">
                         <input id="file-0a" class="file" name="file" type="file" multiple="true" data-min-file-count="0" data-theme="fas">
                         <input id="file-1a" class="file" name="file" type="file" multiple="true" data-min-file-count="0" data-theme="fas">
-
                     </div>
+                    <form action="#" th:action="@{/seedstartermng}" th:object="${seedStarter}" method="post">
+                    <h1>hola mundo esto esta funcionando</h1>
+                    </form>
+
                     <div id="kv-error-1" style="margin-top:10px;display:none"></div>
                     <div id="kv-success-1" class="alert alert-success" style="margin-top:10px;display:none"></div>
                     <br>
