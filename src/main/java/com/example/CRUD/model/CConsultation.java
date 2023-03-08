@@ -1,22 +1,23 @@
-package model;
+package com.example.CRUD.model;
 
 import jakarta.persistence.*;
-import org.springframework.data.repository.CrudRepository;
+
 @Entity
 @Table(name = "consultations")
 public class CConsultation  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String tittle;
+    @Column
+    private String title;
     private String description;
     public CConsultation(){
 
     }
 
-    public CConsultation(int id, String tittle, String description) {
+    public CConsultation (int id, String title, String description) {
         this.id = id;
-        this.tittle = tittle;
+        this.title = title;
         this.description = description;
     }
     public int getId() {
@@ -27,12 +28,12 @@ public class CConsultation  {
         this.id = id;
     }
 
-    public String getTittle() {
-        return tittle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTittle(String tittle) {
-        this.tittle = tittle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
