@@ -16,19 +16,22 @@ import java.util.List;
 @Controller
 
 public class CConsultationController {
-  @Autowired
+    @Autowired
     private IConsultation iConsultation;
 
     @GetMapping("/")
-    public String list (Model model) {
-        List<CConsultation> consultation = (List<CConsultation>) iConsultation.findAll();
-    return "index";
+    public String list(Model model) {
+        model.addAttribute("consultation", iConsultation.findAll());
+
+        return "index";
     }
+
     @GetMapping("/form")
-  public String addConsult(Model model){
-      model.addAttribute("consult",new CConsultation());
-      return "form";
+    public String addConsult(Model model) {
+        model.addAttribute("consult", new CConsultation());
+        return "form";
     }
+
     @PostMapping("/form")
     public String saveConsult(@ModelAttribute CConsultation consult, RedirectAttributes redirectAttrs) {
         iConsultation.save(consult);
@@ -37,4 +40,13 @@ public class CConsultationController {
                 .addFlashAttribute("clase", "success");
         return "redirect:/form";
     }
- }
+
+    @PostMapping(value = "/")
+    public String eliminarProducto(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
+        redirectAttrs
+                .addFlashAttribute("mensaje", "Eliminado correctamente")
+                .addFlashAttribute("clase", "warning");
+        iConsultation.deleteById(consultation.getId());
+        return "redirect:/";
+    }
+}

@@ -9,6 +9,14 @@ import java.util.Date;
 @Entity
 @Table(name = "consultation")
 public class CConsultation  {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
