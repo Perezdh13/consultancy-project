@@ -35,6 +35,6 @@ public class CConsultationController {
         redirectAttrs
                 .addFlashAttribute("mensaje", "Agregado correctamente")
                 .addFlashAttribute("clase", "success");
-        return "redirect:/";
+        return "redirect:/form";
     }
  }
