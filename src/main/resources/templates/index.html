@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+
     <title>Title</title>
 </head>
 <body>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Description</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="consultation: ${consulting}">
+        <td th:text="${consultation.name}"></td>
+        <td th:text="${consultation.surname}"></td>
+        <td th:text="${consultation.title}"></td>
+        <td th:text="${consultation.description}"></td>
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>

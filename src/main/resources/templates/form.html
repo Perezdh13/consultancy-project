@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:fragment="form">
+
+    <div class="form-floating mb-3">
+        <label>Hora de creacion:</label><br>
+        <label for="floatingInputDisabled">User</label>
+        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="Ingresa tu nombre" disabled>
+    </div>
+    <div class="form-floating mb-3">
+        <label for="floatingTextareaDisabled">Titulo</label>
+        <input class="form-control" placeholder="Pon un titulo a tu consulta" id="floatingTextareaDisabled" disabled></input>
+    </div>
+    <div class="form-floating mb-3">
+        <label for="floatingTextarea2Disabled">Descripcion</label>
+        <textarea class="form-control" placeholder="Describe tu consulta" id="floatingTextarea2Disabled" style="height: 100px" disabled></textarea>
+    </div>
+    <div class="form-floating">
+
+
+    </div>
+    <button type="button" class="btn btn-primary">Crear</button>
+    <button type="button" class="btn btn-secondary">Volver al menu principal</button>
+    <button type="button" class="btn btn-success">Limpiar</button>
+
+</div>
+
+</body>
+</html>

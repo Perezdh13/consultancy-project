@@ -7,24 +7,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import java.util.List;
 
 @Controller
 @RequestMapping
 public class CConsultationController {
-    @Autowired
+  @Autowired
     private IConsultation iConsultation;
 
-    private List<CConsultation> list() {
-        return (List<CConsultation>) iConsultation.findAll();
+    @GetMapping("/")
+    public String list (Model model) { List<CConsultation> consultation = (List<CConsultation>) iConsultation.findAll();
+    return "index";
     }
-
-    @GetMapping("/list")
-    public String list(Model model) {
-        List<CConsultation> consultations = list();
-        model.addAttribute("consultations", consultations);
-        return "index";
-    }
-}
-
-
+ }

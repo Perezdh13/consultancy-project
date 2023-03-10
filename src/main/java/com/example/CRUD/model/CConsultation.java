@@ -1,34 +1,39 @@
 package com.example.CRUD.model;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.CurrentTimestamp;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Entity
-@Table(name = "consultations")
-public class CConsultation {
+@Table(name = "consultation")
+public class CConsultation  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column
     private String name;
     private String surname;
     private String title;
     private String description;
-    private String date;
-    private int price;
+    /*private String getDateTime(){
+        DateFormat dateFormat = new SimpleDateFormat("yy/MM/dd HH:mm:ss");
+        Date date = new Date();
+        return  dateFormat.format(date);
+    }*/
+    public CConsultation(){
 
-    public CConsultation() {
     }
-    public CConsultation(int id, String name, String surname, String title, String description, String date, int price) {
-        super ();
+
+    public CConsultation (int id, String name, String surname, String title, String description) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.title = title;
         this.description = description;
-        this.date = date;
-        this.price = price;
-    }
 
+    }
     public int getId() {
         return id;
     }
@@ -36,7 +41,6 @@ public class CConsultation {
     public void setId(int id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
@@ -53,6 +57,7 @@ public class CConsultation {
         this.surname = surname;
     }
 
+
     public String getTitle() {
         return title;
     }
@@ -67,21 +72,5 @@ public class CConsultation {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 }
