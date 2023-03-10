@@ -17,7 +17,9 @@ public class CConsultationController {
     private IConsultation iConsultation;
 
     @GetMapping("/")
-    public String list (Model model) { List<CConsultation> consultation = (List<CConsultation>) iConsultation.findAll();
+    public String list (Model model) {
+      model.addAttribute("consultation",iConsultation.findAll());
+     // List<CConsultation> consultation = (List<CConsultation>) iConsultation.findAll();
     return "index";
     }
  }
