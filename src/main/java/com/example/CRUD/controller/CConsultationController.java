@@ -15,6 +15,7 @@ import java.util.List;
 
 @Controller
 
+
 public class CConsultationController {
     @Autowired
     private IConsultation iConsultation;
@@ -22,27 +23,24 @@ public class CConsultationController {
     @GetMapping("/")
     public String list(Model model) {
         model.addAttribute("consultation", iConsultation.findAll());
-
         return "index";
     }
-
     @GetMapping("/form")
-    public String addConsult(Model model) {
+    public String form(Model model) {
         model.addAttribute("consult", new CConsultation());
         return "form";
     }
-
     @PostMapping("/form")
     public String saveConsult(@ModelAttribute CConsultation consult, RedirectAttributes redirectAttrs) {
         iConsultation.save(consult);
         redirectAttrs
                 .addFlashAttribute("mensaje", "Agregado correctamente")
                 .addFlashAttribute("clase", "success");
-        return "redirect:/form";
+        return "redirect:/";
     }
 
-    @PostMapping(value = "/")
-    public String eliminarProducto(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
+    @PostMapping( "/delete")
+    public String deleteConsult(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
         redirectAttrs
                 .addFlashAttribute("mensaje", "Eliminado correctamente")
                 .addFlashAttribute("clase", "warning");

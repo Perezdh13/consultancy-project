@@ -29,7 +29,7 @@
                     <a class="nav-link" href="#">AboutUs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Add your class</a>
+                    <a class="nav-link" href="#" th:href="@{/form}">Add your class</a>
                 </li>
             </ul>
         </div>
@@ -44,10 +44,11 @@
 
         </p>
         <hr>
-        <div class="blog-post-actions">
+        <div  class="blog-post-actions">
 
             <p class="blog-post-bottom pull-right">
                 <span class="badge quote-badge">Editar</span>
+                <a action="/delete"  method="post" type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
             </p>
         </div>
     </blockquote>

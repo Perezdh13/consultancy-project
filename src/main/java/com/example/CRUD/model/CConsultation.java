@@ -12,21 +12,6 @@ public class CConsultation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column
-    private String name;
-    private String surname;
-    private String title;
-    private String description;
-    public CConsultation() {
-    }
-
-    public CConsultation(int id, String name, String surname, String title, String description) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.title = title;
-        this.description = description;
-    }
 
     public int getId() {
         return id;
@@ -35,6 +20,7 @@ public class CConsultation {
     public void setId(int id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
@@ -50,7 +36,6 @@ public class CConsultation {
     public void setSurname(String surname) {
         this.surname = surname;
     }
-
 
     public String getTitle() {
         return title;
@@ -68,24 +53,24 @@ public class CConsultation {
         this.description = description;
     }
 
-    private String user;
+    private String name;
+    private String surname;
     private String title;
     private String description;
-    /*private String getDateTime(){
-        DateFormat dateFormat = new SimpleDateFormat("yy/MM/dd HH:mm:ss");
-        Date date = new Date();
-        return  dateFormat.format(date);
-    }*/
-    public CConsultation(){
-
+    public CConsultation() {
     }
 
-    public CConsultation (int id, String user, String title, String description) {
+    public CConsultation(int id, String name, String surname, String title, String description) {
         this.id = id;
-        this.user = user;
+        this.name = name;
+        this.surname = surname;
         this.title = title;
         this.description = description;
+    }
+
+
+
 
     }
 
-}
+

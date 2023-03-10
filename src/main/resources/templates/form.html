@@ -16,8 +16,12 @@ method="post">
 
     <div class="form-floating mb-3">
         <label>Hora de creacion:</label><br>
-        <label for="user">User</label>
-        <input th:field="*{user}" type="text" class="form-control" id="user" placeholder="Ingresa tu nombre" >
+        <label for="name">Nombre</label>
+        <input th:field="*{name}" type="text" class="form-control" id="name" placeholder="Nombre" >
+    </div>
+    <div class="form-floating mb-3">
+        <label for="surname">Apellidos</label>
+        <input th:field="*{surname}" type="text" class="form-control" placeholder="Apellidos" id="surname" >
     </div>
     <div class="form-floating mb-3">
         <label for="title">Titulo</label>
