@@ -35,7 +35,6 @@ public class CConsultation {
     public void setId(int id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
@@ -52,6 +51,7 @@ public class CConsultation {
         this.surname = surname;
     }
 
+
     public String getTitle() {
         return title;
     }
@@ -67,4 +67,25 @@ public class CConsultation {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    private String user;
+    private String title;
+    private String description;
+    /*private String getDateTime(){
+        DateFormat dateFormat = new SimpleDateFormat("yy/MM/dd HH:mm:ss");
+        Date date = new Date();
+        return  dateFormat.format(date);
+    }*/
+    public CConsultation(){
+
+    }
+
+    public CConsultation (int id, String user, String title, String description) {
+        this.id = id;
+        this.user = user;
+        this.title = title;
+        this.description = description;
+
+    }
+
 }
