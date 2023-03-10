@@ -8,18 +8,16 @@
 <table>
     <thead>
     <tr>
-        <th>Name</th>
-        <th>Surname</th>
+        <th>user</th>
         <th>Title</th>
         <th>Description</th>
-        <th>Description</th>
+
 
     </tr>
     </thead>
     <tbody>
-    <tr th:each="consultation: ${consulting}">
-        <td th:text="${consultation.name}"></td>
-        <td th:text="${consultation.surname}"></td>
+    <tr th:each="consultation: ${consultation}">
+        <td th:text="${consultation.user}"></td>
         <td th:text="${consultation.title}"></td>
         <td th:text="${consultation.description}"></td>
     </tr>

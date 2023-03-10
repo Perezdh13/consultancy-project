@@ -11,30 +11,27 @@
 </head>
 <body>
 
-<div th:fragment="form">
+<form th:fragment="form" th:object="${consult}" th:action="@{/form}"
+method="post">
 
     <div class="form-floating mb-3">
         <label>Hora de creacion:</label><br>
-        <label for="floatingInputDisabled">User</label>
-        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="Ingresa tu nombre" disabled>
+        <label for="user">User</label>
+        <input th:field="*{user}" type="text" class="form-control" id="user" placeholder="Ingresa tu nombre" >
     </div>
     <div class="form-floating mb-3">
-        <label for="floatingTextareaDisabled">Titulo</label>
-        <input class="form-control" placeholder="Pon un titulo a tu consulta" id="floatingTextareaDisabled" disabled></input>
+        <label for="title">Titulo</label>
+        <input th:field="*{title}" type="text" class="form-control" placeholder="Pon un titulo a tu consulta" id="title" >
     </div>
     <div class="form-floating mb-3">
-        <label for="floatingTextarea2Disabled">Descripcion</label>
-        <textarea class="form-control" placeholder="Describe tu consulta" id="floatingTextarea2Disabled" style="height: 100px" disabled></textarea>
+        <label for="description">Descripcion</label>
+        <textarea th:field="*{description}"class="form-control" placeholder="Describe tu consulta" id="description" style="height: 100px" />
     </div>
-    <div class="form-floating">
-
-
-    </div>
-    <button type="button" class="btn btn-primary">Crear</button>
-    <button type="button" class="btn btn-secondary">Volver al menu principal</button>
+    <button type="submit" class="btn btn-primary">Crear</button>
+    <a type="button" class="btn btn-secondary" th:href="@{/}">Volver al menu principal</a>
     <button type="button" class="btn btn-success">Limpiar</button>
 
-</div>
+</form>
 
 </body>
 </html>
