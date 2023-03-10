@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
+
+    <link th:href="@{/styles/cssandjs/main.css}" rel="stylesheet" >
+    <link>
     <title>Title</title>
 </head>
 <body>
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Surname</th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Description</th>
+<nav class="navbar navbar-expand-lg navbar-dark " style="background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%)">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">Hidden brand</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Add your class</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container" th:each="consultation: ${consultation}">
+    <blockquote class="quote-box">
 
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="consultation: ${consulting}">
-        <td th:text="${consultation.name}"></td>
-        <td th:text="${consultation.surname}"></td>
-        <td th:text="${consultation.title}"></td>
-        <td th:text="${consultation.description}"></td>
-    </tr>
-    </tbody>
-</table>
+        <p class="quote-text" th:text="${consultation.name}">        </p>
+        <p class="blog-post-bottom pull-left" th:text="${consultation.title}">
+        <p class="blog-post-bottom pull-left" th:text="${consultation.description}">
+
+        </p>
+        <hr>
+        <div class="blog-post-actions">
+
+            <p class="blog-post-bottom pull-right">
+                <span class="badge quote-badge">Editar</span>
+            </p>
+        </div>
+    </blockquote>
+</div>
+
+
 
 </body>
 </html>
