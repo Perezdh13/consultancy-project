@@ -16,6 +16,7 @@ public class CConsultation {
     private String surname;
     private String title;
     private String description;
+
     public int getId() {
         return id;
     }
@@ -66,6 +67,7 @@ public class CConsultation {
         this.title = title;
         this.description = description;
     }
+}
 
 
 
