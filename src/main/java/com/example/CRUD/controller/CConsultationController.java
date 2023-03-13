@@ -27,24 +27,32 @@ public class CConsultationController {
     }
     @GetMapping("/form")
     public String form(Model model) {
-        model.addAttribute("consult", new CConsultation());
+        model.addAttribute("consultation", new CConsultation());
         return "form";
     }
     @PostMapping("/form")
-    public String saveConsult(@ModelAttribute CConsultation consult, RedirectAttributes redirectAttrs) {
-        iConsultation.save(consult);
+    public String saveConsult(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
+        iConsultation.save(consultation);
         redirectAttrs
                 .addFlashAttribute("mensaje", "Agregado correctamente")
                 .addFlashAttribute("clase", "success");
         return "redirect:/";
     }
+    @GetMapping("/edit/{id}")
+    public String showEditForm(@PathVariable("id") int id, Model model) {
+        Optional<CConsultation> consultation = iConsultation.findById(id);
+        model.addAttribute("consultation", consultation);
+        return "edit";
+    }
 
-    @PostMapping( "/delete")
-    public String deleteConsult(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
-        redirectAttrs
-                .addFlashAttribute("mensaje", "Eliminado correctamente")
-                .addFlashAttribute("clase", "warning");
-        iConsultation.deleteById(consultation.getId());
+    @PostMapping("/edit/{id}")
+    public String updateConsultation(@PathVariable("id") int id, @ModelAttribute("consultation") CConsultation consultation) {
+        iConsultation.save(consultation);
+        return "redirect:/";
+    }
+    @GetMapping("/delete/{id}")
+    public String deleteConsultation(@PathVariable("id") int id) {
+        iConsultation.deleteById(id);
         return "redirect:/";
     }
 }
