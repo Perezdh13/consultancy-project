@@ -32,7 +32,7 @@ public class CConsultationController {
                 .addFlashAttribute("clase", "success");
         return "redirect:/";
     }
-    @DeleteMapping ( "/delete/{id}")
+    @GetMapping ( "/delete/{id}")
     public String deleteConsult(@PathVariable Integer id) {
         iConsultation.deleteById(id);
         return "redirect:/";
