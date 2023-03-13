@@ -47,10 +47,9 @@ public class CConsultationController {
         iConsultation.save(consultation);
         return "redirect:/";
     }
-
-    @DeleteMapping(value = "/delete/{id}")
-    public void deletePost(@PathVariable int id) {
-        iConsultation.deleteById(iConsultation.findById(id));
-
+    @GetMapping("/delete/{id}")
+    public String deleteConsultation(@PathVariable("id") int id) {
+        iConsultation.deleteById(id);
+        return "redirect:/";
     }
 }

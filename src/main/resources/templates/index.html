@@ -48,7 +48,7 @@
 
             <p class="blog-post-bottom pull-right">
                 <a  th:href="@{/edit/{id}(id=${consultation.id})}"method="post" type="submit" value="{consultation.id}" class="btn btn-warning" >Editar</a>
-                <a th:action="@{/delete/{id}(id=${consultation.id})}"  method="post" type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
+                <a th:href="@{/delete/{id}(id=${consultation.id})}"  method="get" type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
             </p>
         </div>
     </blockquote>
