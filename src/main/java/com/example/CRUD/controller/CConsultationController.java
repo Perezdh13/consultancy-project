@@ -24,4 +24,12 @@ public class CConsultationController {
     public String form(Model model) {
         return "form";
     }
+    @PostMapping("/form")
+    public String saveConsult(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
+        iConsultation.save(consultation);
+        redirectAttrs
+                .addFlashAttribute("mensaje", "Agregado correctamente")
+                .addFlashAttribute("clase", "success");
+        return "redirect:/";
+    }
 }
