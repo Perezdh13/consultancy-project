@@ -3,19 +3,16 @@ package com.example.CRUD.controller;
 import com.example.CRUD.interfaces.IConsultation;
 import com.example.CRUD.model.CConsultation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.List;
+import java.util.Optional;
 
 @Controller
-
-
 public class CConsultationController {
     @Autowired
     private IConsultation iConsultation;
@@ -27,24 +24,33 @@ public class CConsultationController {
     }
     @GetMapping("/form")
     public String form(Model model) {
-        model.addAttribute("consult", new CConsultation());
+        model.addAttribute("consultation", new CConsultation());
         return "form";
     }
     @PostMapping("/form")
-    public String saveConsult(@ModelAttribute CConsultation consult, RedirectAttributes redirectAttrs) {
-        iConsultation.save(consult);
+    public String saveConsult(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
+        iConsultation.save(consultation);
         redirectAttrs
                 .addFlashAttribute("mensaje", "Agregado correctamente")
                 .addFlashAttribute("clase", "success");
         return "redirect:/";
     }
+    @GetMapping("/edit/{id}")
+    public String showEditForm(@PathVariable("id") int id, Model model) {
+        Optional<CConsultation> consultation = iConsultation.findById(id);
+        model.addAttribute("consultation", consultation);
+        return "edit";
+    }
 
-    @PostMapping( "/delete")
-    public String deleteConsult(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
-        redirectAttrs
-                .addFlashAttribute("mensaje", "Eliminado correctamente")
-                .addFlashAttribute("clase", "warning");
-        iConsultation.deleteById(consultation.getId());
+    @PostMapping("/edit/{id}")
+    public String updateConsultation(@PathVariable("id") int id, @ModelAttribute("consultation") CConsultation consultation) {
+        iConsultation.save(consultation);
         return "redirect:/";
+    }
+
+    @DeleteMapping(value = "/delete/{id}")
+    public void deletePost(@PathVariable int id) {
+        iConsultation.deleteById(iConsultation.findById(id));
+
     }
 }
