@@ -1,0 +1,68 @@
+body {
+    background-image:url(https://cdn.pixabay.com/photo/2017/07/31/11/31/laptop-2557468_1280.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+blockquote {
+    border-left:none
+}
+
+.quote-badge {
+    background-color: #FFC700;
+}
+
+.quote-box {
+
+    overflow: hidden;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 17px;
+    background-color: #122340CC;
+    color: white;
+    width: 325px;
+    height: 325px;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+
+}
+
+.quotation-mark {
+
+    margin-top: 10px;
+    font-weight: bold;
+    font-size:100px;
+    color: white;
+    font-family: "Times New Roman", Times, Serif;
+
+}
+
+.quote-text {
+    font-size: 19px;
+}
+
+.blog-post-bottom pull-right {
+    background-color: ;
+}
+
+h1 {
+   color: #fff;
+}
+
+header, footer {
+	background-color: rgb(18, 35, 64);
+	color: #fff;
+}
+
+.navbar-nav a {
+	color: #fff !important;
+}
+.content {
+    min-height: calc(100vh - 130px);
+}
+footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
