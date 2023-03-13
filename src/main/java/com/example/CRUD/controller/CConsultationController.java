@@ -2,17 +2,21 @@ package com.example.CRUD.controller;
 
 import com.example.CRUD.interfaces.IConsultation;
 import com.example.CRUD.model.CConsultation;
+import org.apache.velocity.exception.ResourceNotFoundException;
+import org.hibernate.mapping.Map;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+
+import java.util.HashMap;
 import java.util.Optional;
 
 @Controller
+@RequestMapping(value = "/api/v1", method = RequestMethod.GET)
 public class CConsultationController {
     @Autowired
     private IConsultation iConsultation;
@@ -27,7 +31,7 @@ public class CConsultationController {
         model.addAttribute("consultation", new CConsultation());
         return "form";
     }
-    @PostMapping("/form")
+    @PostMapping("/form2")
     public String saveConsult(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
         iConsultation.save(consultation);
         redirectAttrs
@@ -35,6 +39,7 @@ public class CConsultationController {
                 .addFlashAttribute("clase", "success");
         return "redirect:/";
     }
+
     @GetMapping("/edit/{id}")
     public String showEditForm(@PathVariable("id") int id, Model model) {
         Optional<CConsultation> consultation = iConsultation.findById(id);
@@ -42,15 +47,17 @@ public class CConsultationController {
         return "edit";
     }
 
-    @PostMapping("/edit/{id}")
-    public String updateConsultation(@PathVariable("id") int id, @ModelAttribute("consultation") CConsultation consultation) {
-        iConsultation.save(consultation);
-        return "redirect:/";
-    }
-
-    @DeleteMapping(value = "/delete/{id}")
-    public void deletePost(@PathVariable int id) {
-        iConsultation.deleteById(iConsultation.findById(id));
-
-    }
+//    @PutMapping("/{id}")
+//    public String updateConsultation(@PathVariable("id") int id, @ModelAttribute("consultation") CConsultation consultation) {
+//        iConsultation.save(consultation);
+//        return "redirect:/";
+//    }
+//
+//
+//
+//    @DeleteMapping("/{id}")
+//    public String delete(@PathVariable int id) {
+//        iConsultation.deleteById(id);
+//        return "redirect:/";
+//    }
 }

@@ -29,7 +29,7 @@
                     <a class="nav-link" href="#">AboutUs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" th:href="@{/form}">Add your class</a>
+                    <a class="nav-link" href="#" th:method="get" th:href="@{/form}">Add your class</a>
                 </li>
             </ul>
         </div>
@@ -37,7 +37,7 @@
 </header>
 
 <div class="content">
-    <div class="container">
+    <div>
         <h2>Bienvenido a Consulting Room</h2>
         <p>Lista de clases o dudas.</p>
     </div>
@@ -56,7 +56,7 @@
 
             <p class="blog-post-bottom pull-right">
                 <a  th:href="@{/edit/{id}(id=${consultation.id})}"method="post" type="submit" value="{consultation.id}" class="btn btn-warning" >Editar</a>
-                <a th:action="@{/delete/{id}(id=${consultation.id})}"  method="post" type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
+                <a th:href="@{/{id}(id=${consultation.id})}"  type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
             </p>
         </div>
     </blockquote>
