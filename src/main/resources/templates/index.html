@@ -48,8 +48,7 @@
 
             <p class="blog-post-bottom pull-right">
                 <span class="badge quote-badge">Editar</span>
-                <a action="/delete"  method="post" type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
-            </p>
+                <a th:href="@{/delete/{id}(id=${consultation.id})}"  method="get" type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
         </div>
     </blockquote>
 </div>
