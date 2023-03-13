@@ -17,7 +17,7 @@ blockquote {
 .quote-box {
 
     overflow: hidden;
-    margin-top: 50px;
+    margin-top:50px;
     padding: 15px;
     border-radius: 17px;
     background-color: #122340CC;
@@ -28,6 +28,10 @@ blockquote {
 
 }
 
+.grid {
+  display: flex;
+  grid-gap: 80px;
+}
 
 .quote-text {
     font-size: 19px;
