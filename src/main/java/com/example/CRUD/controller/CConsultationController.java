@@ -3,12 +3,14 @@ package com.example.CRUD.controller;
 import com.example.CRUD.interfaces.IConsultation;
 import com.example.CRUD.model.CConsultation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.util.Optional;
 
 @Controller
 public class CConsultationController {
@@ -22,6 +24,7 @@ public class CConsultationController {
     }
     @GetMapping("/form")
     public String form(Model model) {
+        model.addAttribute("consultation", new CConsultation());
         return "form";
     }
     @PostMapping("/form")
@@ -31,5 +34,23 @@ public class CConsultationController {
                 .addFlashAttribute("mensaje", "Agregado correctamente")
                 .addFlashAttribute("clase", "success");
         return "redirect:/";
+    }
+    @GetMapping("/edit/{id}")
+    public String showEditForm(@PathVariable("id") int id, Model model) {
+        Optional<CConsultation> consultation = iConsultation.findById(id);
+        model.addAttribute("consultation", consultation);
+        return "edit";
+    }
+
+    @PostMapping("/edit/{id}")
+    public String updateConsultation(@PathVariable("id") int id, @ModelAttribute("consultation") CConsultation consultation) {
+        iConsultation.save(consultation);
+        return "redirect:/";
+    }
+
+    @DeleteMapping(value = "/delete/{id}")
+    public void deletePost(@PathVariable int id) {
+        iConsultation.deleteById(iConsultation.findById(id));
+
     }
 }
