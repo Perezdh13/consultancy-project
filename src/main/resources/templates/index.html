@@ -29,20 +29,12 @@
                     <a class="nav-link" href="#">AboutUs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" th:method="get" th:href="@{/form}">Add your class</a>
+                    <a class="nav-link" href="#" th:href="@{/form}">Add your class</a>
                 </li>
             </ul>
         </div>
     </nav>
 </header>
-
-<div class="content">
-    <div>
-        <h2>Bienvenido a Consulting Room</h2>
-        <p>Lista de clases o dudas.</p>
-    </div>
-</div>
-
 <div class="container" th:each="consultation: ${consultation}">
     <blockquote class="quote-box">
 
@@ -56,14 +48,19 @@
 
             <p class="blog-post-bottom pull-right">
                 <a  th:href="@{/edit/{id}(id=${consultation.id})}"method="post" type="submit" value="{consultation.id}" class="btn btn-warning" >Editar</a>
-                <a th:href="@{/{id}(id=${consultation.id})}"  type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
+                <a th:href="@{/delete/{id}(id=${consultation.id})}"  method="get" type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
             </p>
         </div>
     </blockquote>
 </div>
 
 
-
+<div class="content">
+    <div class="container">
+        <h2>Bienvenido a Consulting Room</h2>
+        <p>Lista de clases o dudas.</p>
+    </div>
+</div>
 
 <footer class="mt-5 py-3">
     <div class="container">
