@@ -3,48 +3,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
           crossorigin="anonymous">
-    <title>Title</title>
+    <link th:href="@{/styles/css/main.css}" rel="stylesheet" >
+    <link th:href="@{/styles/css/header.css}" rel="stylesheet" >
+    <link th:href="@{/styles/css/footer.css}" rel="stylesheet" >
+
+    <title>Form</title>
+    <link th:href="@{/styles/css/form.css}" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+    </style>
 </head>
 <body>
+<th:block th:insert="header :: header"></th:block>
 
-<form th:object="${consultation}" method="post">
 
-    <div class="form-floating mb-3">
-        <label for="name">Nombre y Apellidos</label>
-        <input th:field="*{name}" type="text" class="form-control" id="name" placeholder="Nombre y Apellidos">
+<div class="container d-flex justify-content-center mt-5">
+    <div class="card" style="width: 60rem">
+        <div class="form-floating mb-3 text-warning">
+            <h1 class="d-flex justify-content-center">Añade tu consulta</h1>
+        </div>
+        <form class="form-container" th:fragment="form" th:object="${consultation}"
+              method="post">
+            <div class="form-floating mb-3">
+                <label  class="text-white" for="name">Nombre y Apellidos</label>
+                <input th:field="*{name}" required type="text" class="form-control" id="name" placeholder="Nombre y Apellidos">
+            </div>
+            <div class="form-floating mb-3">
+                <label class="text-white" for="stack">Apellidos</label>
+                <select th:field="*{stack}" required class="form-control"  id="stack">
+                    <option value="" selected >Selecciona un stack para tu consulta</option>
+                    <option value="HTML5">HTML5</option>
+                    <option value="CSS3">CSS3</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="React.js">React.js</option>
+                    <option value="AngularJS">AngularJS</option>
+                    <option value="Java">Java</option>
+                    <option value="MySQL">MySQL</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+            <div class="form-floating mb-3">
+                <label class="text-white"  for="title">Título</label>
+                <input th:field="*{title}" required type="text" class="form-control" placeholder="Pon un titulo a tu consulta"
+                       id="title">
+            </div>
+            <div class="form-floating mb-3">
+                <label class="text-white"  for="description">Descripción</label>
+                <textarea th:field="*{description}" required class="form-control" placeholder="Describe tu consulta"
+                          id="description"
+                          style="height: 100px"/>
+            </div>
+            <button type="submit" class="btn btn-primary">Crear</button>
+            <a type="button" class="btn btn-warning" th:href="@{/form}">Limpiar</a>
+        </form>
+
     </div>
-    <div class="form-floating mb-3">
-        <label for="stack">Stack</label>
-        <select th:field="*{stack}" class="form-control"  id="stack">
-                <option value="" selected >Selecciona un stack para tu consulta</option>
-                <option value="HTML5">HTML5</option>
-                <option value="CSS3">CSS3</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="React.js">React.js</option>
-                <option value="AngularJS">AngularJS</option>
-                <option value="Java">Java</option>
-                <option value="MySQL">MySQL</option>
-                <option value="Python">Python</option>
-        </select>
-
-    </div>
-    <div class="form-floating mb-3">
-        <label for="title">Titulo</label>
-        <input th:field="*{title}" type="text" class="form-control" placeholder="Pon un titulo a tu consulta" id="title" >
-    </div>
-    <div class="form-floating mb-3">
-        <label for="description">Descripcion</label>
-        <textarea th:field="*{description}"class="form-control" placeholder="Describe tu consulta" id="description" style="height: 100px" />
-    </div>
-    <button type="submit" class="btn btn-primary">Crear</button>
-    <a type="button" class="btn btn-secondary" th:href="@{/}">Volver al menu principal</a>
-    <a type="button"  class="btn btn-success" th:href="@{/form}">Limpiar</a>
-
-</form>
-
+</div>
+<th:block th:insert="footer :: footer"></th:block>
 </body>
 </html>

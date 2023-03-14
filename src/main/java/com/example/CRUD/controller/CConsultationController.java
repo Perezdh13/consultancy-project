@@ -12,11 +12,9 @@ import java.util.Optional;
 
 @Controller
 
-
 public class CConsultationController {
     @Autowired
     private IConsultation iConsultation;
-
     @GetMapping("/")
     public String list(Model model) {
         model.addAttribute("consultation", iConsultation.findAll());
@@ -51,4 +49,6 @@ public class CConsultationController {
         iConsultation.deleteById(id);
         return "redirect:/";
     }
+
+
 }
