@@ -9,13 +9,11 @@ public class CConsultation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-        private String name;
+    private String name;
     private String stack;
     private String title;
     private String description;
     private LocalDate date;
-
-
 
     public int getId() {
         return id;
@@ -83,6 +81,7 @@ public class CConsultation {
         this.date = date;
     }
 }
+
 
 
 
