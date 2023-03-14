@@ -8,7 +8,7 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
           crossorigin="anonymous">
     <title>Form</title>
-    <link th:href="@{/styles/cssandjs/form.css}" rel="stylesheet">
+    <link th:href="@{/styles/css/form.css}" rel="stylesheet">
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
     </style>
@@ -23,20 +23,20 @@
               method="post">
             <div class="form-floating mb-3">
                 <label  class="text-white" for="name">Nombre</label>
-                <input th:field="*{name}" type="text" class="form-control" id="name" placeholder="Nombre">
+                <input th:field="*{name}" required type="text" class="form-control" id="name" placeholder="Nombre">
             </div>
             <div class="form-floating mb-3">
                 <label class="text-white" for="surname">Apellidos</label>
-                <input th:field="*{surname}" type="text" class="form-control" placeholder="Apellidos" id="surname">
+                <input th:field="*{surname}" required type="text" class="form-control" placeholder="Apellidos" id="surname">
             </div>
             <div class="form-floating mb-3">
                 <label class="text-white"  for="title">Título</label>
-                <input th:field="*{title}" type="text" class="form-control" placeholder="Pon un titulo a tu consulta"
+                <input th:field="*{title}" required type="text" class="form-control" placeholder="Pon un titulo a tu consulta"
                        id="title">
             </div>
             <div class="form-floating mb-3">
                 <label class="text-white"  for="description">Descripción</label>
-                <textarea th:field="*{description}" class="form-control" placeholder="Describe tu consulta"
+                <textarea th:field="*{description}" required class="form-control" placeholder="Describe tu consulta"
                           id="description"
                           style="height: 100px"/>
             </div>
