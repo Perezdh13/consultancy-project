@@ -35,23 +35,24 @@
         </div>
     </nav>
 </header>
-<div class="container" th:each="consultation: ${consultation}">
-    <blockquote class="quote-box">
+<div class="container" >
+    <div class="grid">
+        <div class="quote-box" th:each="consultation: ${consultation}">
 
-        <p class="quote-text" th:text="${consultation.name}">        </p>
-        <p class="blog-post-bottom pull-left" th:text="${consultation.title}">
-        <p class="blog-post-bottom pull-left" th:text="${consultation.description}">
+            <p class="quote-text" th:text="${consultation.name}"></p>
+            <p class="blog-post-bottom pull-left" th:text="${consultation.title}"></p>
+            <p class="blog-post-bottom pull-left" th:text="${consultation.description}"></p>
+            <hr>
+            <div  class="blog-post-actions">
 
-        </p>
-        <hr>
-        <div  class="blog-post-actions">
-
-            <p class="blog-post-bottom pull-right">
-                <a  th:href="@{/edit/{id}(id=${consultation.id})}"method="post" type="submit" value="{consultation.id}" class="btn btn-warning" >Editar</a>
-                <a th:href="@{/delete/{id}(id=${consultation.id})}"  method="get" type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
-            </p>
+                <p class="blog-post-bottom pull-right">
+                    <a  th:href="@{/edit/{id}(id=${consultation.id})}"method="post" type="submit" value="{consultation.id}" class="btn btn-warning" >Editar</a>
+                    <a th:href="@{/delete/{id}(id=${consultation.id})}"  method="get" type="submit" value="{consultation.id}" class="btn btn-warning" >Eliminar</a>
+                </p>
+            </div>
         </div>
-    </blockquote>
+    </div>
+
 </div>
 <div class="content">
     <div class="container">
