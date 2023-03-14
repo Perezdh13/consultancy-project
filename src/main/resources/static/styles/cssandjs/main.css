@@ -17,7 +17,7 @@ blockquote {
 .quote-box {
 
     overflow: hidden;
-    margin-top: 50px;
+    margin-top:50px;
     padding: 15px;
     border-radius: 17px;
     background-color: #122340CC;
@@ -28,23 +28,16 @@ blockquote {
 
 }
 
-.quotation-mark {
-
-    margin-top: 10px;
-    font-weight: bold;
-    font-size:100px;
-    color: white;
-    font-family: "Times New Roman", Times, Serif;
-
+.grid {
+  display: flex;
+  grid-gap: 80px;
 }
 
 .quote-text {
     font-size: 19px;
 }
 
-.blog-post-bottom pull-right {
-    background-color: ;
-}
+
 
 h1 {
    color: #fff;
