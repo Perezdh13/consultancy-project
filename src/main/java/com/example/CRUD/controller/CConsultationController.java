@@ -14,11 +14,9 @@ import java.util.Optional;
 
 @Controller
 
-
 public class CConsultationController {
     @Autowired
     private IConsultation iConsultation;
-
     @GetMapping("/")
     public String list(Model model) {
         model.addAttribute("consultation", iConsultation.findAll());
@@ -43,7 +41,6 @@ public class CConsultationController {
         model.addAttribute("consultation", consultation);
         return "edit";
     }
-
     @PostMapping("/edit/{id}")
     public String updateConsultation(@PathVariable("id") int id, @ModelAttribute("consultation") CConsultation consultation) {
         iConsultation.save(consultation);
