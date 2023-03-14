@@ -26,8 +26,8 @@ public class CConsultationController {
         return "form";
     }
     @PostMapping("/form")
-    public String saveConsult(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
-        iConsultation.save(consultation);
+    public String saveConsult(@ModelAttribute CConsultation consult, RedirectAttributes redirectAttrs) {
+        iConsultation.save(consult);
         redirectAttrs
                 .addFlashAttribute("mensaje", "Agregado correctamente")
                 .addFlashAttribute("clase", "success");

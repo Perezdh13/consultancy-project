@@ -1,10 +1,7 @@
 package com.example.CRUD.model;
-
 import jakarta.persistence.*;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.lang.String;
 
 @Entity
 @Table(name = "consultation")
@@ -12,10 +9,14 @@ public class CConsultation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String name;
-    private String surname;
+        private String name;
+    private String stack;
     private String title;
     private String description;
+    private LocalDate date;
+
+
+
     public int getId() {
         return id;
     }
@@ -32,12 +33,17 @@ public class CConsultation {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+
+    public String getStack() {
+        return stack;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setStack(String stack) {
+        this.stack = stack;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
     public String getTitle() {
@@ -55,8 +61,28 @@ public class CConsultation {
     public void setDescription(String description) {
         this.description = description;
     }
-}
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    @PrePersist
+    public void setDate() {
+        this.date = LocalDate.now();
+    }
+
+    public CConsultation() {
+    }
+
+    public CConsultation(int id, String name, String stack, String title, String description, LocalDate date) {
+        this.id = id;
+        this.name = name;
+        this.stack = stack;
+        this.title = title;
+        this.description = description;
+        this.date = date;
+    }
+}
 
 
 
