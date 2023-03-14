@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+
 }
 
 blockquote {
@@ -49,4 +50,6 @@ blockquote {
 .content {
     min-height: calc(100vh - 130px);
 }
-
+.hello{
+    background-color: red;
+}
