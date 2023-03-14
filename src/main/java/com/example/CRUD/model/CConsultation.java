@@ -13,7 +13,7 @@ public class CConsultation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String surname;
+    private String stack;
     private String title;
     private String description;
     public int getId() {
@@ -32,12 +32,12 @@ public class CConsultation {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getStack() {
+        return stack;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setStack(String stack) {
+        this.stack = stack;
     }
 
     public String getTitle() {

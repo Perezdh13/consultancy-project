@@ -21,12 +21,22 @@
         <form class="form-container" th:fragment="form" th:object="${consultation}"
               method="post">
             <div class="form-floating mb-3">
-                <label class="text-white" for="name">Nombre</label>
-                <input th:field="*{name}" required type="text" class="form-control" id="name" placeholder="Nombre">
+                <label  class="text-white" for="name">Nombre y Apellidos</label>
+                <input th:field="*{name}" required type="text" class="form-control" id="name" placeholder="Nombre y Apellidos">
             </div>
             <div class="form-floating mb-3">
-                <label class="text-white" for="surname">Apellidos</label>
-                <input th:field="*{surname}" required type="text" class="form-control" placeholder="Apellidos" id="surname">
+                <label class="text-white" for="stack">Apellidos</label>
+                <select th:field="*{stack}" required class="form-control"  id="stack">
+                    <option value="" selected >Selecciona un stack para tu consulta</option>
+                    <option value="HTML5">HTML5</option>
+                    <option value="CSS3">CSS3</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="React.js">React.js</option>
+                    <option value="AngularJS">AngularJS</option>
+                    <option value="Java">Java</option>
+                    <option value="MySQL">MySQL</option>
+                    <option value="Python">Python</option>
+                </select>
             </div>
             <div class="form-floating mb-3">
                 <label class="text-white" for="title">Título</label>
