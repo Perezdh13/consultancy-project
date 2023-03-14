@@ -9,19 +9,37 @@
           crossorigin="anonymous">
     <title>Title</title>
 </head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["name"]["surname].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
 <body>
 
-<form th:fragment="form" th:object="${consultation}" th:action="@{/form}"
-      method="post">
-
+<form th:fragment="form" th:object="${consultation}" method="post">
 
     <div class="form-floating mb-3">
-        <label for="name">Nombre</label>
-        <input th:field="*{name}" type="text" class="form-control" id="name" placeholder="Nombre">
+        <label for="name">Nombre y Apellidos</label>
+        <input th:field="*{name}" type="text" class="form-control" id="name" placeholder="Nombre y Apellidos">
     </div>
     <div class="form-floating mb-3">
-        <label for="surname">Apellidos</label>
-        <input th:field="*{surname}" type="text" class="form-control" placeholder="Apellidos" id="surname" >
+        <label for="stack">Stack</label>
+        <select th:field="*{stack}" class="form-control"  id="stack">
+                <option value="" selected >Selecciona un stack para tu consulta</option>
+                <option value="HTML5">HTML5</option>
+                <option value="CSS3">CSS3</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="React.js">React.js</option>
+                <option value="AngularJS">AngularJS</option>
+                <option value="Java">Java</option>
+                <option value="MySQL">MySQL</option>
+                <option value="Python">Python</option>
+        </select>
+
     </div>
     <div class="form-floating mb-3">
         <label for="title">Titulo</label>

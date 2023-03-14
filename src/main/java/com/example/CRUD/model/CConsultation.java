@@ -1,9 +1,6 @@
 package com.example.CRUD.model;
 import jakarta.persistence.*;
-import org.springframework.format.annotation.DateTimeFormat;
-
-import java.time.LocalDateTime;
-
+import java.time.LocalDate;
 import java.lang.String;
 
 @Entity
@@ -12,11 +9,11 @@ public class CConsultation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String name;
-    private String surname;
+        private String name;
+    private String stack;
     private String title;
     private String description;
-    private LocalDateTime date;
+    private LocalDate date;
 
 
 
@@ -36,12 +33,17 @@ public class CConsultation {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+
+    public String getStack() {
+        return stack;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setStack(String stack) {
+        this.stack = stack;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
     public String getTitle() {
@@ -60,22 +62,22 @@ public class CConsultation {
         this.description = description;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
     @PrePersist
     public void setDate() {
-        this.date = LocalDateTime.now();
+        this.date = LocalDate.now();
     }
 
     public CConsultation() {
     }
 
-    public CConsultation(int id, String name, String surname, String title, String description, LocalDateTime date) {
+    public CConsultation(int id, String name, String stack, String title, String description, LocalDate date) {
         this.id = id;
         this.name = name;
-        this.surname = surname;
+        this.stack = stack;
         this.title = title;
         this.description = description;
         this.date = date;
