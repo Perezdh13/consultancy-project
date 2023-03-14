@@ -12,8 +12,10 @@
     </style>
     <title>Title</title>
 </head>
+
 <body>
-<div class="container">
+<th:block  th:insert="header :: header"></th:block>
+<div class="container d-flex justify-content-center mt-5">
     <div class="card" style="width: 60rem">
         <div class="form-floating mb-3 text-warning">
             <h1 class="d-flex justify-content-center">Modifica tu consulta</h1>
@@ -53,5 +55,6 @@
         </form>
     </div>
 </div>
+<th:block th:insert="footer :: footer"></th:block>
 </body>
 </html>
