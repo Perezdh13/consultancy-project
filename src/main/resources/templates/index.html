@@ -42,7 +42,7 @@
         <div class="col-10 col-md-6 col-lg-4" th:each="consultation: ${consultation}">
             <div class="quote-box card" >
                 <div class="card-block h-75">
-                <h5 class="card-title" th:text="${consultation.name} + ' ' + ${consultation.surname}"></h5>
+                <h5 class="card-title" th:text="${consultation.name}"></h5>
                 <p class="card-text" th:text="${consultation.title}"></p>
                 <p class="card-text" th:text="${consultation.description}"></p>
                 </div>
