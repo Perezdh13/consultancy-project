@@ -1,10 +1,10 @@
 package com.example.CRUD.model;
-
 import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
+
+import java.lang.String;
 
 @Entity
 @Table(name = "consultation")
@@ -16,6 +16,9 @@ public class CConsultation {
     private String surname;
     private String title;
     private String description;
+    private LocalDateTime date;
+
+
 
     public int getId() {
         return id;
@@ -57,15 +60,25 @@ public class CConsultation {
         this.description = description;
     }
 
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    @PrePersist
+    public void setDate() {
+        this.date = LocalDateTime.now();
+    }
+
     public CConsultation() {
     }
 
-    public CConsultation(int id, String name, String surname, String title, String description) {
+    public CConsultation(int id, String name, String surname, String title, String description, LocalDateTime date) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.title = title;
         this.description = description;
+        this.date = date;
     }
 }
 

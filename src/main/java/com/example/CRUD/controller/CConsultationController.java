@@ -3,8 +3,6 @@ package com.example.CRUD.controller;
 import com.example.CRUD.interfaces.IConsultation;
 import com.example.CRUD.model.CConsultation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +24,7 @@ public class CConsultationController {
     }
     @GetMapping("/form")
     public String form(Model model) {
-        model.addAttribute("consult", new CConsultation());
+        model.addAttribute("consultation", new CConsultation());
         return "form";
     }
     @PostMapping("/form")
@@ -43,7 +41,6 @@ public class CConsultationController {
         model.addAttribute("consultation", consultation);
         return "edit";
     }
-
     @PostMapping("/edit/{id}")
     public String updateConsultation(@PathVariable("id") int id, @ModelAttribute("consultation") CConsultation consultation) {
         iConsultation.save(consultation);

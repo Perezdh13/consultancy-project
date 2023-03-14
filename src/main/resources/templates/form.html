@@ -14,10 +14,10 @@
 <form th:fragment="form" th:object="${consultation}" th:action="@{/form}"
       method="post">
 
+
     <div class="form-floating mb-3">
-        <label>Hora de creacion:</label><br>
         <label for="name">Nombre</label>
-        <input th:field="*{name}" type="text" class="form-control" id="name" placeholder="Nombre" >
+        <input th:field="*{name}" type="text" class="form-control" id="name" placeholder="Nombre">
     </div>
     <div class="form-floating mb-3">
         <label for="surname">Apellidos</label>
