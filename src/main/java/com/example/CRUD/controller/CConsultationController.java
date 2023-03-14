@@ -28,8 +28,8 @@ public class CConsultationController {
         return "form";
     }
     @PostMapping("/form")
-    public String saveConsult(@ModelAttribute CConsultation consultation, RedirectAttributes redirectAttrs) {
-        iConsultation.save(consultation);
+    public String saveConsult(@ModelAttribute CConsultation consult, RedirectAttributes redirectAttrs) {
+        iConsultation.save(consult);
         redirectAttrs
                 .addFlashAttribute("mensaje", "Agregado correctamente")
                 .addFlashAttribute("clase", "success");
@@ -41,7 +41,6 @@ public class CConsultationController {
         model.addAttribute("consultation", consultation);
         return "edit";
     }
-
     @PostMapping("/edit/{id}")
     public String updateConsultation(@PathVariable("id") int id, @ModelAttribute("consultation") CConsultation consultation) {
         iConsultation.save(consultation);
