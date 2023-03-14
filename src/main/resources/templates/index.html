@@ -39,11 +39,9 @@
     <div class="grid">
         <div class="quote-box" th:each="consultation: ${consultation}">
 
-            <p class="quote-text" th:text="${consultation.name}">        </p>
-            <p class="blog-post-bottom pull-left" th:text="${consultation.title}">
-            <p class="blog-post-bottom pull-left" th:text="${consultation.description}">
-
-            </p>
+            <p class="quote-text" th:text="${consultation.name}"></p>
+            <p class="blog-post-bottom pull-left" th:text="${consultation.title}"></p>
+            <p class="blog-post-bottom pull-left" th:text="${consultation.description}"></p>
             <hr>
             <div  class="blog-post-actions">
 
