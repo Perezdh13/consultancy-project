@@ -9,6 +9,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+
 }
 
 .quote-box {
@@ -27,23 +28,9 @@ body {
 
 
 
-h1 {
-   color: #fff;
-}
-
-header, footer {
-	background-color: rgb(18, 35, 64);
-	color: #fff;
-}
-
-.navbar-nav a {
-	color: #fff !important;
-}
 .content {
     min-height: calc(100vh - 130px);
 }
-footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+.hello{
+    background-color: red;
+}
