@@ -42,21 +42,24 @@
         <div class="col-10 col-md-6 col-lg-4" th:each="consultation: ${consultation}">
             <div class="quote-box card" >
                 <div class="card-block h-75">
-                <h5 class="card-title" th:text="${consultation.name}"></h5>
-                <p class="card-text" th:text="${consultation.title}"></p>
-                <p class="card-text" th:text="${consultation.description}"></p>
+                    <p class="card-text" th:text="'Creada el: ' + ${consultation.date}"></p>
+                    <h4 class="card-title" th:text="${consultation.name}"></h4>
+                    <p class="card-text text-warning" th:text="'Stack: ' + ${consultation.stack}"></p>
+                    <p class="card-text" th:text="'Motivo: ' + ${consultation.title}"></p>
+                    <p class="card-text" th:text="'Descripción: ' + ${consultation.description}"></p>
                 </div>
                 <hr>
-                <div  class="d-grid gap-2 d-flex">
-                        <a  th:href="@{/edit/{id}(id=${consultation.id})}" method="post" type="submit" value="{consultation.id}" class="btn btn-warning btn-sm" >Editar</a>
-                        <a th:href="@{/delete/{id}(id=${consultation.id})}" method="get" type="submit" value="{consultation.id}" class="btn btn-warning btn-sm" >Eliminar</a>
+                <div class="d-grid gap-2 d-flex">
+                    <a th:href="@{/edit/{id}(id=${consultation.id})}" method="post"
+                       value="{consultation.id}" class="btn btn-warning btn-sm">Editar</a>
+                    <a th:href="@{/delete/{id}(id=${consultation.id})}" method="get"
+                       value="{consultation.id}" class="btn btn-warning btn-sm" onclick="return confirmDelete()">Eliminar</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <footer class="mt-5 py-3">
     <div class="container">
         <p>&copy; 2023 Consulting Room. Todos los derechos reservados.</p>
