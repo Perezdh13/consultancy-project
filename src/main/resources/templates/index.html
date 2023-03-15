@@ -39,7 +39,9 @@
                     <h4 class="card-title" th:text="${consultation.name}"></h4>
                     <p class="card-text text-warning" th:text="'Stack: ' + ${consultation.stack}"></p>
                     <p class="card-text" th:text="'Motivo: ' + ${consultation.title}"></p>
+                    <div class="overflow-auto " style="height: 75px;">
                     <p class="card-text" th:text="'Descripción: ' + ${consultation.description}"></p>
+                    </div>
                 </div>
                 <hr>
                 <div class="d-grid gap-2 d-flex">
@@ -47,7 +49,6 @@
                        value="{consultation.id}" class="btn btn-warning btn-sm">Editar</a>
                     <a th:href="@{/delete/{id}(id=${consultation.id})}" method="get" type="submit"
                        value="{consultation.id}" class="btn btn-warning btn-sm" onclick="return confirmDelete()">Eliminar</a>
-                    </p>
                 </div>
             </div>
         </div>
