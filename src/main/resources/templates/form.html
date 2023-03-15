@@ -3,17 +3,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <link th:href="@{/styles/css/main.css}" rel="stylesheet" >
+    <link th:href="@{/styles/css/form.css}" rel="stylesheet">
     <link th:href="@{/styles/css/header.css}" rel="stylesheet" >
     <link th:href="@{/styles/css/footer.css}" rel="stylesheet" >
 
     <title>Form</title>
-    <link th:href="@{/styles/css/form.css}" rel="stylesheet">
+
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
     </style>
@@ -29,12 +33,12 @@
         </div>
         <form class="form-container" th:fragment="form" th:object="${consultation}"
               method="post">
-            <div class="form-floating mb-3">
+            <div class=" mb-3">
                 <label  class="text-white" for="name">Nombre y Apellidos</label>
                 <input th:field="*{name}" required type="text" class="form-control" id="name" placeholder="Nombre y Apellidos">
             </div>
-            <div class="form-floating mb-3">
-                <label class="text-white" for="stack">Apellidos</label>
+            <div class=" mb-3">
+                <label class="text-white" for="stack">Stack</label>
                 <select th:field="*{stack}" required class="form-control"  id="stack">
                     <option value="" selected >Selecciona un stack para tu consulta</option>
                     <option value="HTML5">HTML5</option>
@@ -47,12 +51,12 @@
                     <option value="Python">Python</option>
                 </select>
             </div>
-            <div class="form-floating mb-3">
+            <div class=" mb-3">
                 <label class="text-white"  for="title">Título</label>
                 <input th:field="*{title}" required type="text" class="form-control" placeholder="Pon un titulo a tu consulta"
                        id="title">
             </div>
-            <div class="form-floating mb-3">
+            <div class=" mb-3">
                 <label class="text-white"  for="description">Descripción</label>
                 <textarea th:field="*{description}" required class="form-control" placeholder="Describe tu consulta"
                           id="description"
