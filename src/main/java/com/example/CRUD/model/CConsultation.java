@@ -30,8 +30,6 @@ public class CConsultation {
     public void setName(String name) {
         this.name = name;
     }
-
-
     public String getStack() {
         return stack;
     }
