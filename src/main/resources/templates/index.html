@@ -23,11 +23,13 @@
     <title>Consulting Room</title>
 </head>
 
-<th:block  th:insert="header :: header"></th:block>
+<th:block th:insert="header :: header"></th:block>
 
 <div class="container pb-5">
-    <h2>Bienvenido a Consulting Room</h2>
-    <p>Lista de clases o dudas.</p>
+    <div class="d-flex align-items-center flex-column">
+        <h1>Bienvenido a Consulting Room</h1>
+        <p>Lista de clases o dudas.</p>
+    </div>
     <div class="row row-cols-3 g-4 d-flex justify-content-center justify-content-md-start">
         <div class="col-10 col-md-6 col-lg-4" th:each="consultation: ${consultation}">
             <div class="quote-box card">
@@ -39,14 +41,13 @@
                     <div class="overflow-auto " style="height: 75px;">
                         <p class="card-text" th:text="'Descripción: ' + ${consultation.description}"></p>
                     </div>
-
                 </div>
                 <hr>
                 <div class="d-grid gap-2 d-flex">
                     <a th:href="@{/edit/{id}(id=${consultation.id})}" method="post" type="submit"
                        value="{consultation.id}" class="btn btn-warning btn-sm">Editar</a>
-                    <a th:href="@{/delete/{id}(id=${consultation.id})}" onclick="return confirmDelete()" method="get" type="submit"
-                       value="{consultation.id}" class="btn btn-warning btn-sm">Eliminar</a>
+                    <a th:href="@{/delete/{id}(id=${consultation.id})}" method="get" type="submit"
+                       value="{consultation.id}" class="btn btn-warning btn-sm" onclick="return confirmDelete()">Eliminar</a>
                 </div>
             </div>
         </div>
@@ -55,10 +56,6 @@
 
 
 <th:block th:insert="footer :: footer"></th:block>
-
-
-
-
 
 
 </body>

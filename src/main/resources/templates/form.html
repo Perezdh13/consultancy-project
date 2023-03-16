@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,14 +33,15 @@
         </div>
         <form class="form-container" th:fragment="form" th:object="${consultation}"
               method="post">
-            <div class=" mb-3">
-                <label  class="text-white" for="name">Nombre y Apellidos</label>
-                <input th:field="*{name}" required type="text" class="form-control" id="name" placeholder="Nombre y Apellidos">
+            <div class="mb-3">
+                <label class="text-white" for="name">Nombre y Apellidos</label>
+                <input th:field="*{name}" required type="text" class="form-control" id="name"
+                       placeholder="Nombre y Apellidos">
             </div>
-            <div class=" mb-3">
+            <div class="mb-3">
                 <label class="text-white" for="stack">Stack</label>
-                <select th:field="*{stack}" required class="form-control"  id="stack">
-                    <option value="" selected >Selecciona un stack para tu consulta</option>
+                <select th:field="*{stack}" required class="form-control" id="stack">
+                    <option value="" selected>Selecciona un stack para tu consulta</option>
                     <option value="HTML5">HTML5</option>
                     <option value="CSS3">CSS3</option>
                     <option value="JavaScript">JavaScript</option>
@@ -51,13 +52,14 @@
                     <option value="Python">Python</option>
                 </select>
             </div>
-            <div class=" mb-3">
-                <label class="text-white"  for="title">Título</label>
-                <input th:field="*{title}" required type="text" class="form-control" placeholder="Pon un titulo a tu consulta"
+            <div class="mb-3">
+                <label class="text-white" for="title">Título</label>
+                <input th:field="*{title}" required type="text" class="form-control"
+                       placeholder="Pon un titulo a tu consulta"
                        id="title">
             </div>
-            <div class=" mb-3">
-                <label class="text-white"  for="description">Descripción</label>
+            <div class="mb-3">
+                <label class="text-white" for="description">Descripción</label>
                 <textarea th:field="*{description}" required class="form-control" placeholder="Describe tu consulta"
                           id="description"
                           style="height: 100px"/>
