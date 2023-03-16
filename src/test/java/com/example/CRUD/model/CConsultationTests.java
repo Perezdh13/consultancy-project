@@ -25,13 +25,11 @@ public class CConsultationTests {
 
         EntityType<CConsultation> consultationType = entityManager.getMetamodel().entity(CConsultation.class);
 
-
         assertThat(consultationType).isNotNull();
         assertThat(consultationType.getName()).isEqualTo("CConsultation");
         assertThat(entityManager.getEntityManagerFactory().getMetamodel().getEntities())
                 .extracting("name").contains("CConsultation");
 
-        
         Set<String> attributeNames = consultationType.getAttributes().stream()
                 .map(attribute -> attribute.getName()).collect(Collectors.toSet());
 
