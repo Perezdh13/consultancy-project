@@ -57,13 +57,13 @@ Para instalar la aplicación deberéis seguir los pasos que describo a continuac
 
 <h2>12. Final Product</h2>
 
-<p>HOME PAGE </p>
+<h3>Página Principal</h3>
 <img width="895" alt="homepage1" src="https://i.gyazo.com/c3ccee7bf636b889d7be4220135da5be.jpg">
 
 
-<p>view star movil </p>
-<img width="242" alt="viewstart movile" src="https://user-images.githubusercontent.com/116891108/221119439-60bba045-cada-44ad-b6fa-1b709609ab33.png">
+<3>Formulario</3>
+<img width="242" alt="viewstart movile" src="https://i.gyazo.com/4f1771e365d64d0342997f89ff66468e.jpg">
 
 <p>Contact </p>
-<img width="917" alt="contact" src="https://user-images.githubusercontent.com/116891108/221119694-4424df43-d719-42a9-885e-804061d6648e.png">
+<img width="917" alt="contact" src="https://i.gyazo.com/0dae877ae20100eed09db530473ef1fb.jpg">
 
