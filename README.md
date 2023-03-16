@@ -27,12 +27,19 @@ edicción de nuestra consulta únicamente debemos presionar el botón de actuali
 
 <h2>4. Stack 🛠️⚙️</h2>
 
-<div width="400" height="400"style="display:flex" style="margin-left:50" >
-<img style="display: flex-wrap" align="center"  height="60" width="120" alt="VSCode" src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"/>
-<img style="display: flex-wrap" align="center"  height="60" width="120" alt="Figma" src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
-<img style="display: flex-wrap" align="center"  height="60" width="120" alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-<img style="display: flex-wrap" align="center"  height="60" width="120" alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-<img style="display: flex-wrap" align="center"  height="60" width="120" alt="Git" src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"/>
+<div width="400" height="400" style="display:flex" style="margin-left:50" >
+ <img style="display: flex-wrap" align="center"  height="28" width="auto" alt="IntelliJIDEA" src="https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white"/>
+<img style="display: flex-wrap" align="center"  height="28" width="auto" alt="Figma" src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
+<img style="display: flex-wrap" align="center"  height="28" width="auto" alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<img style="display: flex-wrap" align="center"  height="28" width="auto" alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img style="display: flex-wrap" align="center"  height="28" width="auto" alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+   <img style="display: flex-wrap" align="center"  height="28" width="auto" alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"/>
+<img style="display: flex-wrap" align="center"  height="28" width="auto" alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"/>
+  <img style="display: flex-wrap" align="center"  height="28" width="auto" alt="Thymeleaf" src="https://img.shields.io/badge/Thymeleaf-%23005C0F.svg?style=for-the-badge&logo=Thymeleaf&logoColor=white"/>
+<img style="display: flex-wrap" align="center"  height="28" width="auto" alt="Git" src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"/>  
+  <img style="display: flex-wrap" align="center"  height="28" width="auto" alt="Jira" src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white"/>
+
+  
 
 
 <h2>5. Instalación de nuestro proyecto ⚗️🧪</h2>
