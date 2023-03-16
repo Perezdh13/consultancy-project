@@ -1,12 +1,12 @@
 <h1 align="center">🏛️Consultancy Room🏛️</h1>
 
-<h2>1. Project description:</h2>
+<h2>1. Descripción del proyecto:</h2>
 
 Este proyecto desarollado en Java, mediante Spring Boot y Thymeleaf, nos permite visualizar, añadir, eliminar y actualizar (CRUD) consultas en una base de datos a 
 tiempo real. Ha sido relizado mediante el entorno de desarrollo (IDE) IntelliJ, utilizando el denominado patrón de arquitectura modelo-vista-controlador, y empleando el sistema 
 de gestión de base de datos de MySQL XAMPP / Workbench, donde se ha generado la tabla en la cual se almacena la información. 
 
-<h2>2. Functionalities:</h2>
+<h2>2. Funcionalidades:</h2>
 
 <ul>
 <li>Vista principal: en la página principal podemos visualizar las diversas consultas que se encuentran en nuestra base de datos repartidas en tarjetas, donde nos 
@@ -38,9 +38,6 @@ edicción de nuestra consulta únicamente debemos presionar el botón de actuali
   <img style="display: flex-wrap" align="center"  height="28" width="auto" alt="Thymeleaf" src="https://img.shields.io/badge/Thymeleaf-%23005C0F.svg?style=for-the-badge&logo=Thymeleaf&logoColor=white"/>
 <img style="display: flex-wrap" align="center"  height="28" width="auto" alt="Git" src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"/>  
   <img style="display: flex-wrap" align="center"  height="28" width="auto" alt="Jira" src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white"/>
-
-  
-
 
 <h2>5. Instalación de nuestro proyecto ⚗️🧪</h2>
 
