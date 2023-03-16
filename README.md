@@ -3,8 +3,7 @@
 <h2>1. Descripción del proyecto:</h2>
 
 Este proyecto desarollado en Java, mediante Spring Boot y Thymeleaf, nos permite visualizar, añadir, eliminar y actualizar (CRUD) consultas en una base de datos a 
-tiempo real. Ha sido relizado mediante el entorno de desarrollo (IDE) IntelliJ, utilizando el denominado patrón de arquitectura modelo-vista-controlador, y empleando el sistema 
-de gestión de base de datos de MySQL XAMPP / Workbench, donde se ha generado la tabla en la cual se almacena la información. 
+tiempo real. Ha sido realizado mediante el entorno de desarrollo (IDE) IntelliJ, utilizando el denominado patrón de arquitectura modelo-vista-controlador, y empleando el sistema de gestión de base de datos de MySQL XAMPP / Workbench, donde se ha generado la tabla en la cual se almacena la información. 
 
 <h2>2. Funcionalidades:</h2>
 
@@ -13,7 +12,7 @@ de gestión de base de datos de MySQL XAMPP / Workbench, donde se ha generado la
 encontraremos con la fecha de creación -que nos permite ordenar las tarjetas por fecha más reciente-, los nombres y apellidos, la matería de consulta, un título,
 una breve descripción y los botones de editar y borrar.</li>
 <li>Formulario de consulta: en esta vista podemos añadir consultas a nuestra base de datos cumplimentando, obligatoriamente, los diversos campos que nos aparecen
-en pantalla. Posteriormente debemos de de presionar el botón de enviar. </li>
+en pantalla. Posteriormente debemos de presionar el botón de enviar. </li>
 <li>Formulario de edición: en esta vista nos aparecen los datos de la tarea que hayamos seleccionado para así poder editarlos. Una vez hayamos concluído la
 edición de nuestra consulta únicamente debemos presionar el botón de actualizar.</li>
 </ul>
