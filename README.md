@@ -64,6 +64,6 @@ Para instalar la aplicación deberéis seguir los pasos que describo a continuac
 <3>Formulario</3>
 <img width="242" alt="viewstart movile" src="https://i.gyazo.com/4f1771e365d64d0342997f89ff66468e.jpg">
 
-<p>Contact </p>
+<p>Editar la consulta</p>
 <img width="917" alt="contact" src="https://i.gyazo.com/0dae877ae20100eed09db530473ef1fb.jpg">
 
