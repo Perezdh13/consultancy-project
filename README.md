@@ -58,7 +58,7 @@ Para instalar la aplicación deberéis seguir los pasos que describo a continuac
 <h2>12. Final Product</h2>
 
 <p>HOME PAGE </p>
-![HomePageCR](https://user-images.githubusercontent.com/119669918/225569237-5fc9654a-9731-4578-ba77-15c7f7b75268.jpg)
+<img width="895" alt="homepage1" src="https://gyazo.com/c3ccee7bf636b889d7be4220135da5be">
 
 
 <p>view star movil </p>
