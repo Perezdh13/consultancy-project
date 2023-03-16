@@ -14,8 +14,8 @@ encontraremos con la fecha de creación -que nos permite ordenar las tarjetas po
 una breve descripción y los botones de editar y borrar.</li>
 <li>Formulario de consulta: en esta vista podemos añadir consultas a nuestra base de datos cumplimentando, obligatoriamente, los diversos campos que nos aparecen
 en pantalla. Posteriormente debemos de de presionar el botón de enviar. </li>
-<li>Formulario de edición: en esta vista nos aparecen los datos de la tarea que hayamos seleccionado para así poder editarlos. Una vez hayamos concluída la
-edicción de nuestra consulta únicamente debemos presionar el botón de actualizar.</li>
+<li>Formulario de edición: en esta vista nos aparecen los datos de la tarea que hayamos seleccionado para así poder editarlos. Una vez hayamos concluído la
+edición de nuestra consulta únicamente debemos presionar el botón de actualizar.</li>
 </ul>
 
 <h2>3. Fullstack Developer Team 💻</h2>
