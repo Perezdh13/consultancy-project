@@ -51,7 +51,7 @@ Para instalar la aplicación deberéis seguir los pasos que describo a continuac
 <li>Mob programming.</li>
 <li>Pair programming.</li>
 <li>Solo programming.</li>
-<li>Agile with SCRUM</li>
+<li>Agile with SCRUM.</li>
 </ul>
 
 
