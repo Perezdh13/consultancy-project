@@ -10,7 +10,5 @@ import java.util.List;
 
 @Repository
 public interface ISearchCconsultation extends JpaRepository<CConsultation, Long> {
-
-    @Query(value = "SELECT * FROM consultation WHERE consultation.stack = %:q% AND consultation.activo =true", nativeQuery = true)
-    List<CConsultation>findByTitle(@Param("q")String q);
+    List<CConsultation>findByStack(String stack);
 }

@@ -31,6 +31,20 @@
         <p>Lista de clases o dudas.</p>
     </div>
     <div class="row row-cols-3 g-4 d-flex justify-content-center justify-content-md-start">
+        <form th:action="@{/search}" method="get">
+            <select name="stack"  class="form-control" id="stack">
+                <option value="" selected>Selecciona un stack para tu consulta</option>
+                <option value="HTML5">HTML5</option>
+                <option value="CSS3">CSS3</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="React.js">React.js</option>
+                <option value="AngularJS">AngularJS</option>
+                <option value="Java">Java</option>
+                <option value="MySQL">MySQL</option>
+                <option value="Python">Python</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
         <div class="col-10 col-md-6 col-lg-4" th:each="consultation: ${consultation}">
             <div class="quote-box card">
                 <div class="card-block h-75">
