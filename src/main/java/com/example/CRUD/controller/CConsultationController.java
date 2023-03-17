@@ -47,7 +47,6 @@ public class CConsultationController {
             c.setStack(consultation.getStack());
             c.setTitle(consultation.getTitle());
             c.setDescription(consultation.getDescription());
-            c.setDate(LocalDate.now());
             iConsultation.save(c);
         });
         return "redirect:/";

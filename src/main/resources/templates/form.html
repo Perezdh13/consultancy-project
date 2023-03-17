@@ -55,12 +55,12 @@
             <div class="mb-3">
                 <label class="text-white" for="title">Título</label>
                 <input th:field="*{title}" required type="text" class="form-control"
-                       placeholder="Pon un titulo a tu consulta"
+                       placeholder="Pon un título a tu consulta"
                        id="title">
             </div>
             <div class="mb-3">
                 <label class="text-white" for="description">Descripción</label>
-                <textarea th:field="*{description}" required class="form-control" placeholder="Describe tu consulta"
+                <textarea th:field="*{description}" maxlength="150" required class="form-control" placeholder="Describe tu consulta"
                           id="description"
                           style="height: 100px"/>
             </div>
