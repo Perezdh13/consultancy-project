@@ -61,12 +61,12 @@ Para instalar la aplicación deberéis seguir los pasos que describo a continuac
 <h2>12. Final Product</h2>
 
 <h3>Página Principal</h3>
-<img width="895" alt="homepage1" src="https://i.gyazo.com/c3ccee7bf636b889d7be4220135da5be.jpg">
+<img width="895" alt="homepage1" src="static/images/Captura de pantalla 2023-03-17 114108.png">
 
 
 <h3>Formulario</h3>
-<img width="895" alt="viewstart movile" src="https://i.gyazo.com/4f1771e365d64d0342997f89ff66468e.jpg">
+<img width="895" alt="viewstart movile" src="static/images/Captura de pantalla 2023-03-17 114135.png">
 
 <p>Editar la consulta</p>
-<img width="895" alt="contact" src="https://i.gyazo.com/0dae877ae20100eed09db530473ef1fb.jpg">
+<img width="895" alt="contact" src="static/images/Captura de pantalla 2023-03-17 114135.jpg">
 
