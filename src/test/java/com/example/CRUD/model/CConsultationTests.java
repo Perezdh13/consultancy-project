@@ -21,7 +21,7 @@ public class CConsultationTests {
     private EntityManager entityManager;
 
     @Test
-    public void testCreateConsultationTableWithRequiredFields() {
+    public void testCreateConsultationTable() {
 
         EntityType<CConsultation> consultationType = entityManager.getMetamodel().entity(CConsultation.class);
 
