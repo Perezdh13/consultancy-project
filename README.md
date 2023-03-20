@@ -76,7 +76,4 @@ Para instalar la aplicación deberéis seguir los pasos que describo a continuac
 <p>Versión tablet</p>
 <img width="895" alt="mobile" src="https://i.gyazo.com/2aa7c9fcc98aa079ec5bee4fda916121.png">
 
-![imagen](https://user-images.githubusercontent.com/119872787/226292394-28bca6d4-7050-4d43-8fb7-cf8bea95fd4d.png)
-![imagen](https://user-images.githubusercontent.com/119872787/226292531-d9032aa5-c487-4fad-9d06-1f4813826335.png)
-
 
