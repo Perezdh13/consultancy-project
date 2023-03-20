@@ -67,13 +67,13 @@ Para instalar la aplicación deberéis seguir los pasos que describo a continuac
 <h3>Formulario</h3>
 <img width="895" alt="viewstart movile" src="https://github.com/Perezdh13/consultancy-project/blob/main/src/main/resources/static/images/Captura%20de%20pantalla%202023-03-17%20114135.png">
 
-<p>Editar la consulta</p>
+<h3>Editar la consulta</h3>
 <img width="895" alt="contact" src="https://github.com/Perezdh13/consultancy-project/blob/main/src/main/resources/static/images/Captura%20de%20pantalla%202023-03-17%20114135.jpg">
 
-<p>Versión movil</p>
+<h3>Versión movil</h3>
 <img width="400" alt="tablet" src="https://i.gyazo.com/2bad1735076f726280812c28b8153cbb.png">
 
-<p>Versión tablet</p>
+<h3>Versión tablet</h3>
 <img width="400" alt="mobile" src="https://i.gyazo.com/2aa7c9fcc98aa079ec5bee4fda916121.png">
 
 
