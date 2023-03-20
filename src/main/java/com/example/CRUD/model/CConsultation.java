@@ -10,6 +10,7 @@ public class CConsultation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    @Column(name = "stack")
     private String stack;
     private String title;
     private String description;

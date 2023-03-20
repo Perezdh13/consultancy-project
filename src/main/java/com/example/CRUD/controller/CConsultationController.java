@@ -2,6 +2,7 @@ package com.example.CRUD.controller;
 
 import com.example.CRUD.interfaces.IConsultation;
 import com.example.CRUD.model.CConsultation;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
