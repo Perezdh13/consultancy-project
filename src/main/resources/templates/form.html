@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet"
@@ -15,17 +14,13 @@
     <link th:href="@{/styles/css/form.css}" rel="stylesheet">
     <link th:href="@{/styles/css/header.css}" rel="stylesheet" >
     <link th:href="@{/styles/css/footer.css}" rel="stylesheet" >
-
-    <title>Form</title>
-
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
     </style>
+    <title>Form</title>
 </head>
 <body>
 <th:block th:insert="header :: header"></th:block>
-
-
 <div class="container d-flex justify-content-center mt-5">
     <div class="card" style="width: 60rem">
         <div class="form-floating mb-3 text-warning">
