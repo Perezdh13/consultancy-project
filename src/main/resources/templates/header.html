@@ -41,9 +41,8 @@
                     </li>
                     <li>
                         <form class="d-flex" th:action="@{/search}" method="get">
-                            <button class="btn btn-outline-warning" type="submit">Buscar</button>
                             <select name="stack"  class="form-control me-2" id="stack">
-                                <option value="" selected>Filtrar segun stack</option>
+                                <option value="" selected>Filtrar según stack</option>
                                 <option value="HTML5">HTML5</option>
                                 <option value="CSS3">CSS3</option>
                                 <option value="JavaScript">JavaScript</option>
@@ -53,6 +52,7 @@
                                 <option value="MySQL">MySQL</option>
                                 <option value="Python">Python</option>
                             </select>
+                            <button class="btn btn-outline-warning" type="submit">Buscar</button>
                         </form>
                     </li>
                 </ul>
