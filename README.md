@@ -70,3 +70,7 @@ Para instalar la aplicación deberéis seguir los pasos que describo a continuac
 <p>Editar la consulta</p>
 <img width="895" alt="contact" src="https://github.com/Perezdh13/consultancy-project/blob/main/src/main/resources/static/images/Captura%20de%20pantalla%202023-03-17%20114135.jpg">
 
+![imagen](https://user-images.githubusercontent.com/119872787/226292394-28bca6d4-7050-4d43-8fb7-cf8bea95fd4d.png)
+![imagen](https://user-images.githubusercontent.com/119872787/226292531-d9032aa5-c487-4fad-9d06-1f4813826335.png)
+
+
