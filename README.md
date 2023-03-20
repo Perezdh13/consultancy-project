@@ -71,9 +71,9 @@ Para instalar la aplicación deberéis seguir los pasos que describo a continuac
 <img width="895" alt="contact" src="https://github.com/Perezdh13/consultancy-project/blob/main/src/main/resources/static/images/Captura%20de%20pantalla%202023-03-17%20114135.jpg">
 
 <p>Versión movil</p>
-<img width="500" alt="tablet" src="https://i.gyazo.com/32e4dd6ae2eaaa3eb02782207d5e1fb7.png">
+<img width="400" alt="tablet" src="https://i.gyazo.com/32e4dd6ae2eaaa3eb02782207d5e1fb7.png">
 
 <p>Versión tablet</p>
-<img width="500" alt="mobile" src="https://i.gyazo.com/2aa7c9fcc98aa079ec5bee4fda916121.png">
+<img width="400" alt="mobile" src="https://i.gyazo.com/2aa7c9fcc98aa079ec5bee4fda916121.png">
 
 
