@@ -67,10 +67,9 @@ public class CConsultation {
         this.date = LocalDate.now();
     }
 
-    public CConsultation() {
-    }
 
-    public CConsultation(int id, String name, String stack, String title, String description, LocalDate date) {
+
+    public CConsultation() {
         this.id = id;
         this.name = name;
         this.stack = stack;
