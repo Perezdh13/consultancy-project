@@ -1,4 +1,5 @@
 package com.example.CRUD.controller;
+
 import com.example.CRUD.interfaces.IConsultation;
 import com.example.CRUD.model.CConsultation;
 import org.jetbrains.annotations.NotNull;
@@ -34,7 +35,7 @@ public class CConsultationController {
         return "redirect:/";
     }
     @GetMapping("/edit/{id}")
-    public String showEditForm(@PathVariable("id") int id, @NotNull Model model) {
+    public String showEditForm(@PathVariable("id") int id, Model model) {
         Optional<CConsultation> consultation = iConsultation.findById(id);
         model.addAttribute("consultation", consultation);
         return "edit";
@@ -47,7 +48,6 @@ public class CConsultationController {
             c.setStack(consultation.getStack());
             c.setTitle(consultation.getTitle());
             c.setDescription(consultation.getDescription());
-
             iConsultation.save(c);
         });
         return "redirect:/";
